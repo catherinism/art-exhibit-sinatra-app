@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     erb:login
   end
 
+#receive the login form, find and log the user
+  post '/login' do
+    binding.pry
+  end
+
 #render signup page
   get 'signup' do
     erb:signup
