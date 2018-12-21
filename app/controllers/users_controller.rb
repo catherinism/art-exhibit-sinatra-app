@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.authenticate(params[:password])
       session[:user_id] = @user.id
       puts session
-      redirect "users/#{@user.id}"
+      redirect "/users/#{@user.id}"
     else
       #error message
       #redirect to log in page
@@ -22,15 +22,15 @@ class UsersController < ApplicationController
 #render signup page
   get '/signup' do
     #raise params.inspect
-
     erb:signup
   end
 
 #receive signup page, create user, and persist in the database
   post '/users' do
     #binding.pry
-    if !params.empty?
+    if !params[:name].empty? || !params[:username].empty? || !params[:password].empty?
     @user = User.create(params)
+    session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
     redirect "/signup"
@@ -39,7 +39,13 @@ end
 
 #render show page
   get '/users/:id' do
-    "test"
+    @user = User.find_by(id: params[:id])
+    erb :'/users/show'
+  end
+
+  get '/logout' do
+    session.clear
+    redirect '/'
   end
 
 end
