@@ -11,10 +11,14 @@ class ExhibitsController < ApplicationController
       @exhibit = Exhibit.create(params)
       redirect "/exhibits/#{@exhibit.id}"
     else
+      #"Please enter your exhibit"
       redirect "/exhibits/new"
     end
-
   end
 
+  get '/exhibits/:id' do
+    @exhibit = Exhibit.find_by(id: params[:id])
+    erb :"/exhibits/show"
+  end
 
 end
