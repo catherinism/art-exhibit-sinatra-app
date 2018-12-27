@@ -24,4 +24,8 @@ class ExhibitsController < ApplicationController
     erb :"/exhibits/show"
   end
 
+  get '/exhibits/:id/edit' do
+    erb :"/exhibits/edit"
+  end
+
 end
