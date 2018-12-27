@@ -10,8 +10,8 @@ class ExhibitsController < ApplicationController
     if !logged_in?
       redirect "/login"
     end
-    if !params.empty?
-      @exhibit = Exhibit.create(params)
+    if !params[:title].empty? && !params[:deadline].empty?
+      @exhibit = Exhibit.create(params) #mass assignmnet? user_id?
       redirect "/exhibits/#{@exhibit.id}"
     else
       #"Please enter your exhibit"
