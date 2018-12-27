@@ -7,7 +7,10 @@ class ExhibitsController < ApplicationController
 
 # receives new exhibit form
   post '/exhibits' do
-    if !params[:theme].empty?
+    if !logged_in?
+      redirect "/login"
+    end
+    if !params.empty?
       @exhibit = Exhibit.create(params)
       redirect "/exhibits/#{@exhibit.id}"
     else

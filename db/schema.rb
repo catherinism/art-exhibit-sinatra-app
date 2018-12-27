@@ -14,10 +14,15 @@
 ActiveRecord::Schema.define(version: 20181219025321) do
 
   create_table "exhibits", force: :cascade do |t|
-    t.string   "theme"
+    t.string   "title"
+    t.string   "deadline"
+    t.string   "medium"
+    t.string   "exhibit_date"
+    t.string   "location"
+    t.string   "entry_fee"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
