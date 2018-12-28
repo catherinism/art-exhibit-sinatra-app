@@ -1,5 +1,11 @@
 class ExhibitsController < ApplicationController
 
+#render all exhibits
+  get '/exhibits' do
+    @exhibits = Exhibit.all
+    erb :"/exhibits/exhibits"
+  end
+
 #render new exhibit page
   get '/exhibits/new' do
     erb :"/exhibits/new"
@@ -40,6 +46,10 @@ class ExhibitsController < ApplicationController
     entry_fee: params[:entry_fee])
 
     redirect "/exhibits/#{@exhibit.id}"
+  end
+
+  get '/delete' do
+    "Hello World"
   end
 
 end

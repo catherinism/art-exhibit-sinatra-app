@@ -1,0 +1,7 @@
+<h1> All Exhibits </h1>
+
+<% @exhibits.each do |exhibit| %>
+
+
+<a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title %></a>
+<% end %>
