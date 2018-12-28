@@ -25,7 +25,12 @@ class ExhibitsController < ApplicationController
   end
 
   get '/exhibits/:id/edit' do
+    @exhibit = Exhibit.find_by(id: params[:id])
     erb :"/exhibits/edit"
+  end
+
+  patch '/exhibits/6' do
+    "Hello World"
   end
 
 end

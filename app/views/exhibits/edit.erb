@@ -1,1 +1,24 @@
-test
+<h1> Exhibit Exhibit </h1>
+<form method="POST" action="/exhibits/<%=@exhibit.id%>">
+  <input type="hidden" name="_method" value="patch">
+<label> Title </label>
+<input type="text" name="title" value="<%= @exhibit.title %>">
+<br>
+<label> Deadline </label>
+<input type="text" name="deadline" value="<%= @exhibit.deadline %>">
+<br>
+<label> Medium </label>
+<input type="text" name="medium" value="<%= @exhibit.medium %>">
+<br>
+<label> Exhibit Date </label>
+<input type="text" name="exhibit_date" value="<%= @exhibit.exhibit_date %>">
+<br>
+<label> Location </label>
+<input type="text" name="location" value="<%= @exhibit.location %>">
+<br>
+<label> Entry Fee </label>
+<input type="text" name="entry_fee" value="<%= @exhibit.entry_fee %>">
+<br>
+<br>
+<input type="submit" value="Save Exhibit">
+</form>
