@@ -29,8 +29,17 @@ class ExhibitsController < ApplicationController
     erb :"/exhibits/edit"
   end
 
-  patch '/exhibits/6' do
-    "Hello World"
+  patch '/exhibits/:id' do
+    @exhibit = Exhibit.find_by(id: params[:id])
+    @exhibit.update(
+    title: params[:title],
+    deadline: params[:deadline],
+    medium: params[:medium],
+    exhibit_date: params[:exhibit_date],
+    location: params[:location],
+    entry_fee: params[:entry_fee])
+
+    redirect "/exhibits/#{@exhibit.id}"
   end
 
 end
