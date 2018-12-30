@@ -9,12 +9,13 @@ class UsersController < ApplicationController
   post '/login' do
     #binding.pry
     @user = User.find_by(username: params[:username])
-    if @user.authenticate(params[:password])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect "/users/#{@user.id}"
     else
       #error message
       #redirect to log in page
+      flash[:message] = "Please try again."
       redirect "/login"
     end
   end
