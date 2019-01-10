@@ -13,22 +13,11 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
-    color: #333;
-    font-family: Sans-Serif;
-    line-height: 18px;
+    background-image:url("../images/art.jpg");
+    width: 100%;
+    background-size: cover;
   }
 
-  .wrapper {
-    background: #fff;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
-    width: 85%;
-  }
 
   h1 {
     font-size: 36px;
