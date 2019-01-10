@@ -44,6 +44,39 @@
     overflow: hidden;
   }
 
+  .intro {
+  width: 694px;
+  height: 107px;
+  color: #707070;
+  font-family: "Open Sans";
+  font-size: 39px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  }
+
+  .jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.button {
+  background-color:#8ad0ea;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
   .content {
     float: left;
     width: 60%; /* 480px / 800px */
