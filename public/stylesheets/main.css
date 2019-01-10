@@ -52,16 +52,10 @@
   font-size: 39px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: right;
+  margin: 70px;
+  position: relative;
+  left: 600px;
   }
-
-  .jumbotron {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
 
 .button {
   background-color:#8ad0ea;
@@ -71,7 +65,7 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: "Open Sans";
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
