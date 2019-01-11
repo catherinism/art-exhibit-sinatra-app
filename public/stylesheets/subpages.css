@@ -15,7 +15,6 @@
   body {
     background-image:url("../images/art2.jpg");
     background-size: cover;
-
   }
 
 
@@ -71,19 +70,6 @@
 	font-size:17px;
 	padding:16px 60px;
 	text-decoration:none;
-}
-
-.form {
-  width: 694px;
-  height: 107px;
-  color: #707070;
-  font-family: "Open Sans";
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 200px 70px;
-  float: right;
 }
 
   .content {
