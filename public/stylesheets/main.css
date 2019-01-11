@@ -13,15 +13,17 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-image:url("../images/art.jpg");
-    width: 100%;
+    background-image:url("../images/art2.jpg");
     background-size: cover;
+
   }
 
 
   h1 {
-    font-size: 36px;
-    line-height: 54px;
+    font-family: "Open Sans";
+    font-size: 39px;
+    font-weight: 400;
+
   }
 
   h2 {
@@ -52,9 +54,9 @@
   font-size: 39px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 70px;
-  position: relative;
-  left: 600px;
+  text-align: center;
+  margin: 200px 70px;
+  float: right;
   }
 
 .button {
@@ -67,7 +69,7 @@
 	color:#ffffff;
 	font-family: "Open Sans";
 	font-size:17px;
-	padding:16px 31px;
+	padding:16px 60px;
 	text-decoration:none;
 }
 
