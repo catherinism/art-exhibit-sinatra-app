@@ -1,11 +1,29 @@
-<h1> Sign Up </h1>
+<!DOCTYPE html>
+    <html class="no-js" lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <title></title>
+        <link rel="stylesheet" href="/stylesheets/subpages.css" />
+      </head>
+      <body>
+          <div class="form">
+            <form method="POST" action="/users">
+              <label>Name</label>
+              <br>
+                <input type="text" name="name" value="">
+                <br>
+              <label>Username</label>
+              <br>
+                <input type="text" name="username" value="">
+                <br>
+                <label>Password</label>
+                <br>
+                <input type="text" name="password" value="">
+                <br>
+                <input type="submit" value="Sign Up">
+              </form>
+          </div>
 
-<form method="POST" action="/users">
-  <label>Name</label>
-    <input type="text" name="name" value="">
-  <label>Username</label>
-    <input type="text" name="username" value="">
-    <label>Password</label>
-    <input type="text" name="password" value="">
-    <input type="submit" value="Sign Up">
-  </form>
+        </body>
+      </html>
