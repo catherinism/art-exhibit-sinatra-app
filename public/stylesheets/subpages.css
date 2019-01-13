@@ -72,6 +72,27 @@
 	text-decoration:none;
 }
 
+input[type=text], select {
+  margin: 8px 0;
+  padding: 12px 50px;
+  border-radius: 80px;
+  border: 1px solid #707070;
+  opacity: 0.3;
+}
+
+input[type=submit] {
+  background-color:#8ad0ea;
+  border-radius: 80px;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: "Open Sans";
+  font-size:17px;
+  padding:12px 85px;
+  margin: 8px 0;
+  text-decoration:none;
+  text-transform: uppercase;
+}
+
   .content {
     float: left;
     width: 60%; /* 480px / 800px */
