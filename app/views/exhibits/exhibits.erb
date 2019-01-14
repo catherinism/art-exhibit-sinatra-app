@@ -13,7 +13,7 @@
           <% @exhibits.each do |exhibit| %>
 
 
-          <a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title %><%= exhibit.deadline %></a>
+          <li><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title %> - <%= exhibit.deadline %></a></li>
 
           <% end %>
         </div>

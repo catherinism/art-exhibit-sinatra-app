@@ -8,31 +8,18 @@
       </head>
       <body>
           <div class="form">
-            <h1> Create New Exhibit </h1>
             <form method="POST" action="/exhibits">
-            <label> Title </label>
+            <input type="text" name="title" value="" placeholder="TITLE">
             <br>
-            <input type="text" name="title" value="">
+            <input type="text" name="deadline" value="" placeholder="DEADLINE">
             <br>
-            <label> Deadline </label>
+            <input type="text" name="medium" value="" placeholder="MEDIUM">
             <br>
-            <input type="text" name="deadline" value="">
+            <input type="text" name="exhibit_date" value="" placeholder="EXHIBIT DATE">
             <br>
-            <label> Medium </label>
+            <input type="text" name="location" value="" placeholder="LOCATION">
             <br>
-            <input type="text" name="medium" value="">
-            <br>
-            <label> Exhibit Date </label>
-            <br>
-            <input type="text" name="exhibit_date" value="">
-            <br>
-            <label> Location </label>
-            <br>
-            <input type="text" name="location" value="">
-            <br>
-            <label> Entry Fee </label>
-            <br>
-            <input type="text" name="entry_fee" value="">
+            <input type="text" name="entry_fee" value="" placeholder="ENTRY FEE">
             <br>
             <br>
             <input type="submit" value="Create Exhibit">

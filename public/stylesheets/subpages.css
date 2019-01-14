@@ -110,6 +110,7 @@ input[type=submit] {
 }
 
 a:link, a:visited, a:hover, a:active {
+  color: #707070;
   text-decoration: none;
 }
 
