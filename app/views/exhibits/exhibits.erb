@@ -7,11 +7,9 @@
       <link rel="stylesheet" href="/stylesheets/subpages.css" />
     </head>
     <body>
-        <div class="form">
-          <h1> All Exhibits </h1>
+        <div class="show">
 
           <% @exhibits.each do |exhibit| %>
-
 
           <li><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title %> - <%= exhibit.deadline %></a></li>
 
