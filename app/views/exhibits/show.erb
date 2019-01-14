@@ -17,6 +17,7 @@
           <p> <%=@exhibit.entry_fee%> </p>
 
           <a href="/exhibits/<%= @exhibit.id %>/edit">Edit</a>
+          <a href="/exhibits">All Exhibits</a>
           <form method="POST" action="/exhibits/<%= @exhibit.id %>">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" name="" value="Delete">
