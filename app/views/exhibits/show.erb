@@ -8,15 +8,15 @@
     </head>
     <body>
         <div class="form">
-          <br>
-          <p> <%=@exhibit.title%> </p>
-          <p> <%=@exhibit.deadline%> </p>
-          <p> <%=@exhibit.medium%> </p>
-          <p> <%=@exhibit.exhibit_date%> </p>
-          <p> <%=@exhibit.location%> </p>
-          <p> <%=@exhibit.entry_fee%> </p>
 
-          <a href="/exhibits/<%= @exhibit.id %>/edit">Edit</a>
+          <p> <%=@exhibit.title.upcase%> </p>
+          <p> <%=@exhibit.deadline.upcase%> </p>
+          <p> <%=@exhibit.medium.upcase%> </p>
+          <p> <%=@exhibit.exhibit_date.upcase%> </p>
+          <p> <%=@exhibit.location.upcase%> </p>
+          <p> <%=@exhibit.entry_fee.upcase%> </p>
+          <br>
+          <p><a href="/exhibits/<%= @exhibit.id %>/edit">Edit</a></p>
           <a href="/exhibits">All Exhibits</a>
           <form method="POST" action="/exhibits/<%= @exhibit.id %>">
             <input type="hidden" name="_method" value="delete">
