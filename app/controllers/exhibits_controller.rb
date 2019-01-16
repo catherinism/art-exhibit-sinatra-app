@@ -32,9 +32,14 @@ class ExhibitsController < ApplicationController
   end
 
   get '/exhibits/:id/edit' do
+    binding.pry
     @exhibit = Exhibit.find_by(id: params[:id])
-    erb :"/exhibits/edit"
-  end
+    if logged_in? && @exhibit.user == current_user
+        erb :"/exhibits/edit"
+      else
+        redirect "/"
+      end
+end
 
   patch '/exhibits/:id' do
     @exhibit = Exhibit.find_by(id: params[:id])
