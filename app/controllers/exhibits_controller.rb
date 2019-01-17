@@ -57,8 +57,12 @@ end
 
   delete '/exhibits/:id' do
     @exhibit = Exhibit.find_by(id: params[:id])
+    if logged_in? && @exhibit.user == current_user
       @exhibit.delete
       redirect '/exhibits'
+    else
+      redirect "/"
+    end
   end
 
 end
