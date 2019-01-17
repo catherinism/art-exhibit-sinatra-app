@@ -25,6 +25,14 @@
 
     <!-- <div class="wrapper"> -->
 
+    <div class="nav">
+        <% if logged_in? %>
+            <a href="/logout">LOGOUT </a>
+            <a href="/">HOME</a>
+      <% end %>
+
+</div>
+
         <%= yield %>
 
       <!-- <footer class="branding">
