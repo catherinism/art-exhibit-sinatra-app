@@ -9,12 +9,12 @@
     <body>
         <div class="form">
 
-          <p> <%=@exhibit.title.upcase%> </p>
-          <p> <%=@exhibit.deadline.upcase%> </p>
-          <p> <%=@exhibit.medium.upcase%> </p>
-          <p> <%=@exhibit.exhibit_date.upcase%> </p>
-          <p> <%=@exhibit.location.upcase%> </p>
-          <p> <%=@exhibit.entry_fee.upcase%> </p>
+          <p> title: <%=@exhibit.title.upcase%> </p>
+          <p> deadline: <%=@exhibit.deadline.upcase%> </p>
+          <p> medium: <%=@exhibit.medium.upcase%> </p>
+          <p> exhibit date: <%=@exhibit.exhibit_date.upcase%> </p>
+          <p> location: <%=@exhibit.location.upcase%> </p>
+          <p> entry fee: <%=@exhibit.entry_fee.upcase%> </p>
           <br>
 
           <% if logged_in? && @exhibit.user == current_user %>
