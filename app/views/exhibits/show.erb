@@ -16,10 +16,9 @@
           <p> <%=@exhibit.location.upcase%> </p>
           <p> <%=@exhibit.entry_fee.upcase%> </p>
           <br>
-          <a href="/exhibits">All Exhibits</a>
-          <a href="/exhibits/new">Add New</a>
+
           <% if logged_in? && @exhibit.user == current_user %>
-          <p><a href="/exhibits/<%= @exhibit.id %>/edit">Edit</a></p>
+          <a href="/exhibits/<%= @exhibit.id %>/edit"><input type="submit" value="Edit"</a>
           <form method="POST" action="/exhibits/<%= @exhibit.id %>">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" name="" value="Delete">
