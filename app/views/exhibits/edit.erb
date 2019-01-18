@@ -11,17 +11,17 @@
           <form method="POST" action="/exhibits/<%=@exhibit.id%>">
             <input type="hidden" name="_method" value="patch">
           <br>
-          <input type="text" name="title" value="<%= @exhibit.title %>">
+          <input type="text" name="title" value="<%= @exhibit.title %>" placeholder="TITLE">
           <br>
-          <input type="text" name="deadline" value="<%= @exhibit.deadline %>">
+          <input type="text" name="deadline" value="<%= @exhibit.deadline %>" placeholder="DEADLINE">
           <br>
-          <input type="text" name="medium" value="<%= @exhibit.medium %>">
+          <input type="text" name="medium" value="<%= @exhibit.medium %>" placeholder="MEDIUM">
           <br>
-          <input type="text" name="exhibit_date" value="<%= @exhibit.exhibit_date %>">
+          <input type="text" name="exhibit_date" value="<%= @exhibit.exhibit_date %>" placeholder="EXHIBIT DATE">
           <br>
-          <input type="text" name="location" value="<%= @exhibit.location %>">
+          <input type="text" name="location" value="<%= @exhibit.location %>" placeholder="LOCATION">
           <br>
-          <input type="text" name="entry_fee" value="<%= @exhibit.entry_fee %>">
+          <input type="text" name="entry_fee" value="<%= @exhibit.entry_fee %>" placeholder="ENTRY FEE">
           <br>
           <br>
           <input type="submit" value="Save Exhibit">
