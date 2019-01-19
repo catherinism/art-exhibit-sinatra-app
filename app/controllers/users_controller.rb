@@ -29,8 +29,8 @@ class UsersController < ApplicationController
 #receive signup page, create user, and persist in the database
   post '/users' do
     #binding.pry
-    if !params[:name].empty? || !params[:username].empty? || !params[:password].empty?
-    @user = User.create(params)
+    @user = User.new(params)
+    if save
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
