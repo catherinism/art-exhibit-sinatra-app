@@ -22,7 +22,7 @@ class ExhibitsController < ApplicationController
       redirect "/exhibits/#{@exhibit.id}"
     else
       #"Please enter your exhibit"
-      flash[:message] = "Please don't leave anything blank"
+      flash[:error] = "Please don't leave anything blank"
       redirect "/exhibits/new"
     end
   end
