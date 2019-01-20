@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     else
       #error message
       #redirect to log in page
-      flash[:message] = "Please try again."
+      flash[:error] = "Your username & password don't match. Please try again."
       redirect "/login"
     end
   end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   post '/users' do
     #binding.pry
     @user = User.new(params)
-    if save
+    if @user.save
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
