@@ -8,6 +8,11 @@
       </head>
       <body>
           <div class="form">
+            
+            <% if flash[:message] %>
+            <p style="color:red; font-size: 13px"> <%= flash[:message] %> </p>
+            <% end %>
+
             <form method="POST" action="/users">
               <label>NAME</label>
               <br>
