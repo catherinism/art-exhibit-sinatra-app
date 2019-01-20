@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     else
       #error message
       #redirect to log in page
-      flash[:error] = "Your username & password don't match. Please try again."
+      flash[:message] = "The information you provided does not match our records. Please re-enter your login information or signup."
       redirect "/login"
     end
   end
@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     session[:user_id] = @user.id
     redirect "/users/#{@user.id}"
   else
+    flash[:message] = "#{@user.errors.full_messages.to_sentence}"
     redirect "/signup"
   end
 end
