@@ -11,7 +11,7 @@
 
           <% @exhibits.each do |exhibit| %>
 
-          <li><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title.titleize %> - <%= exhibit.deadline %></a></li>
+          <li><a href="/exhibits/<%= exhibit.id %>"><%= exhibit.title.titleize %> - <%= exhibit.deadline %> - <%= exhibit.user.name %></a></li>
 
           <% end %>
         </div>
