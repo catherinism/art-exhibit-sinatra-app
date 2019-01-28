@@ -41,6 +41,7 @@ class ExhibitsController < ApplicationController
 
   patch '/exhibits/:id' do
     @exhibit = Exhibit.find_by(id: params[:id])
+    if logged_in? && @exhibit.user == current_user
     @exhibit.update(
     title: params[:title],
     deadline: params[:deadline],
@@ -50,7 +51,11 @@ class ExhibitsController < ApplicationController
     entry_fee: params[:entry_fee])
 
     redirect "/exhibits/#{@exhibit.id}"
+
+  else
+    redirect "/"
   end
+end
 
   delete '/exhibits/:id' do
     @exhibit = Exhibit.find_by(id: params[:id])
