@@ -1,5 +1,11 @@
 A simple Sinatra App that will help a user keep track of their art exhibit opportunities. The user will be able to sign up, log in, create/edit/delete their own exhibit posts.
 
+![](http://i66.tinypic.com/1448vvs.jpg)
+
+![](http://i63.tinypic.com/ab0ztl.jpg)
+
+![](http://i64.tinypic.com/opps89.jpg)
+
 ## Installation
 
 Clone this repository, run bundle install, and run shotgun to start up a server.
